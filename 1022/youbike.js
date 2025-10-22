@@ -22,7 +22,7 @@ fetch(url)
             const name = data.sna.replace("YouBike2.0_", "")
             const address = data.ar
             const bikes = data.available_return_bikes
-            output.textContent += `🚲 ${name} (數量：${bikes}) \n | ${address} \n`
+            output.innerHTML += `🚲 ${name} (數量：${bikes}) <br><span class="address-line">| ${address} <br><br>`
         })
     })
     .catch((err) => {
