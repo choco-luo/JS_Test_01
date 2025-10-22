@@ -10,7 +10,7 @@ fetch(url)
     .then((youbike) => {
         output.textContent = ""
         const keyword = searchBox.value.trim().toLowerCase() // 小寫比對，不過其實不太知道為什麼沒加上就無法搜尋
-        
+
         let filterName
         if (keyword) {
             filterName = youbike.filter(data => {
@@ -26,7 +26,7 @@ fetch(url)
             const name = data.sna.replace("YouBike2.0_", "")
             const address = data.ar
             const bikes = data.available_return_bikes
-            output.innerHTML += `🚲 ${name} (數量：${bikes}) <br><span class="address-line">| ${address} <br><br>`
+            output.innerHTML += `🚲 ${name} (數量: ${bikes}) <br><span class="address-line">| ${address} <br><br>`
         })
     })
     .catch((err) => {
