@@ -1,5 +1,5 @@
 ## YouBike即時查詢服務
-> 資料來源: https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json
+> 資料來源: [YouBike2.0臺北市公共自行車即時資訊](https://data.gov.tw/dataset/137993)
 
 ### YouBike-Search功能
 - 動態查詢(資料更新頻率為1分鐘)
