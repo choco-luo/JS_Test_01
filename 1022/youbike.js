@@ -3,9 +3,9 @@ const output = document.getElementById("output")
 const searchBox = document.querySelector(".search-box")
 
 btn.addEventListener("click", () => {
-    const url = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
+    const api = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
 
-fetch(url)
+fetch(api)
     .then(resp => resp.json())
     .then((youbike) => {
         output.textContent = ""
