@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouBike即時資訊</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="youbike.js" defer></script>
+</head>
+<body>
+    <div>
+        <label class="label-word">YouBike即時資料查詢</label>
+        <a class="small-word">資料來源:</a>
+        <a class="small-word" href="https://data.gov.tw/dataset/137993">政府資料開放平台</a>
+    </div>
+    <div>
+        <div>
+            <input type="text" class="search-box" placeholder="可輸入關鍵字搜尋路名，例如八德路">
+        </div>
+    </div>
+    <div>
+        <button class="btn" id="loadBtn">搜尋</button>
+    </div>
+    <hr>
+    <ul>不會做文字篩選，但是可以一鍵搜尋有YouBike的站點</ul>
+    <pre class="output-font" id="output"></pre>
+</body>
+</html>
