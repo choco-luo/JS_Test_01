@@ -10,13 +10,17 @@ fetch(url)
     .then((youbike) => {
         output.textContent = ""
         const keyword = searchBox.value.trim().toLowerCase() // 小寫比對，不過其實不太知道為什麼沒加上就無法搜尋
-        const filterName = keyword
-            ? youbike.filter(data => {
+        
+        let filterName
+        if (keyword) {
+            filterName = youbike.filter(data => {
                 const name = data.sna.replace("YouBike2.0_", "").toLowerCase()
                 const address = data.ar.toLowerCase()
                 return name.includes(keyword) || address.includes(keyword)
             })
-            : youbike
+        } else {
+            filterName = youbike
+        }
 
         filterName.forEach((data) => {
             const name = data.sna.replace("YouBike2.0_", "")
